@@ -1,0 +1,64 @@
+$list-height: 70px;
+$ic-top: 27px;
+
+aside {
+  width: 200px;
+  display: inline-block;
+  background: blanchedalmond;
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 10px 0;
+      width: 232px;
+
+      div {
+        display: inline-block;
+      }
+
+      .message-info {
+        height: $list-height;
+        width: 200px;
+
+        p, time {
+          width: 160px;
+          margin: 4px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        time {
+          color: cornflowerblue;
+        }
+
+        .ic-message {
+          display: inline-block;
+          height: $list-height;
+          float: left;
+          width: 30px;
+          i {
+            margin-top: $ic-top;
+            margin-left: 8px;
+
+          }
+        }
+      }
+
+      .message-delete {
+        height: $list-height;
+        display: inline-block;
+        float: right;
+        width: 30px;
+
+        i {
+          margin-top: $ic-top;
+          padding: 0 5px;
+        }
+
+      }
+    }
+  }
+}

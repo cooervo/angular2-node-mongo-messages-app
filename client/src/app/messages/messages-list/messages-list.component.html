@@ -1,0 +1,24 @@
+<aside>
+    <ul>
+        <li *ngFor="let message of messages; let i = index;">
+            <div (click)="getMessage(message._id, message)"
+                class="message-info">
+                <div class="ic-message">
+                    <i *ngIf="message.isRead"
+                       class="fa fa-envelope-open-o"></i>
+                    <i *ngIf="!message.isRead"
+                       class="fa fa-envelope-o"></i>
+                </div>
+                <div>
+                    <p><strong>From: </strong>{{message.sender}}</p>
+                    <p><strong>Subject: </strong>{{message.subject}}</p>
+                    <time>{{message.time_sent | date: 'EEE dd MMMM, HH:mm'}}</time>
+                </div>
+            </div>
+            <div (click)="deleteMessage(message._id)"
+                class="message-delete">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+        </li>
+    </ul>
+</aside>

@@ -1,0 +1,12 @@
+// Utilities
+$font-app: 'Lato', sans-serif;
+
+// mixins
+@mixin centerer(){
+  width: 100%;
+  margin: 0;
+
+}@mixin font-app($weight){
+  font-family: $font-app;
+  font-weight: $weight;
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,200,300,400,600,500,700,900');
+
+.app-wrapper {
+  font-family: 'Lato', sans-serif;
+
+  main{
+    height: 100%;
+  }
+
+  header {
+    height: 20px;
+    width: 100%;
+
+    div {
+      height: 100px;
+      @include centerer();
+
+      nav {
+        float: right;
+        height: 100%;
+        line-height: 50px;
+        @include font-app(400);
+        font-size: 20px;
+
+        a {
+          padding: 15px 20px;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+
+

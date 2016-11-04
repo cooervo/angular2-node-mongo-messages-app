@@ -1,0 +1,9 @@
+
+# Ignore jetbrains IDE's
+.idea
+
+# Ingore from server
+/server/node_modules/
+
+# Ingore from client
+/client/node_modules/

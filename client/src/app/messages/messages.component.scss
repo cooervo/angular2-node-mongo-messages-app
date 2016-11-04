@@ -1,0 +1,12 @@
+@import "../../../styles/app-styles.scss";
+
+.messages {
+
+  ul {
+    display: inline-block;
+
+    md-card-title {
+      margin-bottom: 10px;
+    }
+  }
+}

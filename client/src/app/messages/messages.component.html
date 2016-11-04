@@ -1,0 +1,9 @@
+<main class="messages container">
+    <messages-list
+            [messages]="messages"
+            (selected)="onSelected($event)">
+    </messages-list>
+
+    <selected-message [selectedMessage]="selectedMessage"></selected-message>
+</main>
+

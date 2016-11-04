@@ -1,0 +1,13 @@
+.container{
+  @include centerer();
+  min-height: 100%;
+}
+
+.card-box {
+  display: inline-block;
+  width: 45%;
+  margin: 10px 15px;
+  background: rgb(250, 250, 250);
+  min-height: 150px;
+  padding: 10px;
+}
