@@ -12,7 +12,7 @@
                 <div>
                     <p><strong>From: </strong>{{message.sender}}</p>
                     <p><strong>Subject: </strong>{{message.subject}}</p>
-                    <time>{{message.time_sent | date: 'EEE dd MMMM, HH:mm'}}</time>
+                    <time>{{message.time_sent | date: dateFormat}}</time>
                 </div>
             </div>
             <div (click)="deleteMessage(message._id)"

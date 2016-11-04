@@ -12,10 +12,12 @@ export class MessagesListComponent {
 
     @Input() messages: MessageVO[];
     @Output() selected: EventEmitter<MessageVO>;
+    public dateFormat: string;
 
     constructor(private dataService: DataService) {
         this.messages = [];
         this.selected = new EventEmitter<MessageVO>();
+        this.dateFormat = "EEE dd MMMM, HH:mm";
     }
 
 
@@ -43,7 +45,6 @@ export class MessagesListComponent {
 
         // Url = localhost/messages/id
         let url = `${Config.baseUrl}/${Config.messages}/${id}`;
-        console.log("url", url);
 
         this.dataService.deleteData(url).subscribe(
             // success
