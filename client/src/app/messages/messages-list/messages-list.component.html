@@ -2,7 +2,8 @@
     <ul>
         <li *ngFor="let message of messages; let i = index;">
             <div (click)="getMessage(message._id, message)"
-                class="message-info">
+                 class="message-info"
+                 [ngClass]="{'message-checked': message.isRead}">
                 <div class="ic-message">
                     <i *ngIf="message.isRead"
                        class="fa fa-envelope-open-o"></i>
@@ -15,8 +16,8 @@
                     <time>{{message.time_sent | date: dateFormat}}</time>
                 </div>
             </div>
-            <div (click)="deleteMessage(message._id)"
-                class="message-delete">
+            <div (click)="deleteMessage(message._id, i)"
+                 class="message-delete">
                 <i class="fa fa-times" aria-hidden="true"></i>
             </div>
         </li>

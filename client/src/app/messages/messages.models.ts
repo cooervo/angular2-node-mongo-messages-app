@@ -1,4 +1,5 @@
-export class MessageVO{
+export class MessageVO {
+
     public _id: string;
     public sender: string;
     public subject: string;

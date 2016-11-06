@@ -21,8 +21,14 @@ export class MessagesListComponent {
     }
 
 
+    /**
+     * Get a message based on its id
+     *
+     * @param id
+     * @param message
+     */
     public getMessage(id: string, message): void {
-        message.isRead = message.isRead ? false : true;
+        message.isRead = true;
 
         // Url = localhost/messages/id
         let url = `${Config.baseUrl}/${Config.messages}/${id}`;
@@ -41,7 +47,13 @@ export class MessagesListComponent {
         );
     }
 
-    public deleteMessage(id: string): void {
+    /**
+     * Deletes a message on database based on the id and on client based on index in array
+     *
+     * @param id
+     * @param index
+     */
+    public deleteMessage(id: string, index: number): void {
 
         // Url = localhost/messages/id
         let url = `${Config.baseUrl}/${Config.messages}/${id}`;
@@ -49,7 +61,10 @@ export class MessagesListComponent {
         this.dataService.deleteData(url).subscribe(
             // success
             data => {
-                console.log(data)
+                if(data.success){
+                    this.messages.splice(index, 1);
+                }
+
             },
 
             // error

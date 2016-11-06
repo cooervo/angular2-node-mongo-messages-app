@@ -2,7 +2,7 @@ exports.routes = function (expressApp, MessageModel) {
 
     expressApp
 
-    // GET all
+    // GET all messages
         .get("/messages", function (req, res) {
 
             MessageModel.find({}).exec().then(function (results) {
@@ -15,11 +15,9 @@ exports.routes = function (expressApp, MessageModel) {
 
         })
 
-        // GET by id
+        // GET message by id
         .get("/messages/:id", function (req, res) {
             var id = req.params.id;
-
-            console.log("SERVER id", id)
 
             MessageModel.findOne({_id: id}).exec().then(function (results) {
                     res.json(results);
@@ -31,12 +29,18 @@ exports.routes = function (expressApp, MessageModel) {
 
         })
 
-        // DELETE by id
+        // DELETE message by id
         .delete("/messages/:id", function (req, res) {
             var id = req.params.id;
 
-            console.log("SERVER DELETE id", id)
-            res.json({"woot":"woot"});
+            MessageModel.remove({_id: id}, function (err) {
+                if (err) {
+                    console.log("error", err);
+                }
+                else {
+                    res.json({"success": true});
+                }
+            });
 
 
         })

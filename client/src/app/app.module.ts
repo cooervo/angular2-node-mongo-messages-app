@@ -23,9 +23,8 @@ import {MessagesListComponent} from "./messages/messages-list/messages-list.comp
         BrowserModule,
         FormsModule,
         HttpModule,
-        RouterModule.forRoot(routeConfig),
         MaterialModule.forRoot(),
-        
+        RouterModule.forRoot(routeConfig),
     ],
     providers: [
         DataService,

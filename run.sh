@@ -1,16 +1,29 @@
 
 # Import to mongo data from json file
 mongoimport --db app_db --jsonArray --collection messages --drop --file ./server/database/messages_sample.json
-echo "====> JSON data imported to MongoDB!!!"
+echo "
+    ****************************************
+    JSON data imported to MongoDB!!!
+    ****************************************
+"
 
 # Installing dependencies
 cd client/
 npm install
-echo "====> Client Dependencies installed!!!"
+echo "
+    ****************************************
+    Client Dependencies installed!!!
+    ****************************************
+ "
 
 cd ../server/
 npm install
-echo "====> Server Dependencies installed!!!"
+echo "
+    ****************************************
+    Server Dependencies installed!!!
+    ****************************************
+"
+
 
 echo "
 

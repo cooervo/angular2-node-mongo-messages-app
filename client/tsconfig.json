@@ -1,26 +1,28 @@
 {
   "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "module": "commonjs",
-    "target": "es5",
+    "moduleResolution": "node",
     "outDir": "dist",
     "rootDir": ".",
     "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-     "types": [
+    "target": "es5",
+    "types": [
        "core-js",
        "node",
        "hammerjs"
      ]
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts",
+    "node_modules/@types"
   ],
   "awesomeTypescriptLoaderOptions": {
     "useWebpackText": true
   },
   "compileOnSave": false,
-  "buildOnSave": false,
-  "atom": { "rewriteTsconfig": false }
+  "buildOnSave": false
 }

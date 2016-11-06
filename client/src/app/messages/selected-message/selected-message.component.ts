@@ -8,7 +8,7 @@ import {MessageVO} from "../messages.models";
 })
 export class SelectedMessageComponent {
 
+    // Receives selectedMessage as input
     @Input() selectedMessage: MessageVO;
-
 
 }

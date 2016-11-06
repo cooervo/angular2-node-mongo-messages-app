@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+
 import {DataService} from "../shared/data.service";
 import {Config} from "../shared/strings";
 import {MessageVO} from "./messages.models";
@@ -13,13 +14,14 @@ export class MessagesComponent implements OnInit {
     public messages: MessageVO[];
     private selectedMessage: MessageVO;
 
-    private
-
     constructor(private dataService: DataService) {
         this.messages = [];
         this.selectedMessage = new MessageVO();
     }
 
+    /**
+     * On init get Messages from Database
+     */
     ngOnInit(): void {
 
         // Url = localhost/messages
@@ -36,9 +38,11 @@ export class MessagesComponent implements OnInit {
         );
     }
 
+    /**
+     * On selected pass message to parent & sibling components
+     */
     public onSelected($event): void {
         this.selectedMessage = <MessageVO> $event;
-        console.log("this.selectedMessage", this.selectedMessage)
     }
 
 }

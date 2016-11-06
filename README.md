@@ -18,5 +18,3 @@ dependencies, then runs node server. Once node is running:
      npm start
 
 4) navigate to: http://localhost:3000/
-
-5) Contact Mateo at cuervo.taylor@gmail.com ;) to hire me

@@ -4,7 +4,6 @@ $ic-top: 27px;
 aside {
   width: 200px;
   display: inline-block;
-  background: blanchedalmond;
 
   ul {
     padding: 0;
@@ -13,6 +12,7 @@ aside {
       list-style: none;
       margin: 10px 0;
       width: 232px;
+      border: 1px solid black;
 
       div {
         display: inline-block;
@@ -60,5 +60,9 @@ aside {
 
       }
     }
+  }
+
+  .message-checked {
+    opacity: 0.5;
   }
 }
